@@ -1,0 +1,13 @@
+<div class="histogram">
+    <div class="histogram-bar-area">
+        <bar
+            *ngFor="let leader of leaders | leaderSort"
+            [name]="leader.name"
+            [score]="leader.score"
+            [maximum]="maximum"
+            [style.height]="((leader.score / maximum) * 100).toString() + '%'"></bar>
+    </div>
+    <div class="histogram-x-axis">
+        
+    </div>
+</div>

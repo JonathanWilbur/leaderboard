@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    --background-dark:      #000000;
+    --background-medium:    #111111;
+    --background-light:     #222222;
+    --foreground-dark:      #333333;
+    --foreground-medium:    #444444;
+    --foreground-light:     #555555;
+    --text-dark:            #AAAAAA;
+    --text-medium:          #BBBBBB;
+    --text-light:           #CCCCCC;
+    --accent-dark:          #228844;
+    --accent-medium:        #33AA66;
+    --accent-light:         #44DD99;
+    --accent:               var(--accent-medium);
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}

@@ -1,0 +1,44 @@
+leader,.leaderboard-header-row {
+    margin: 0px;
+    padding: 10px;
+    background-color: var(--foreground-dark);
+    color: var(--text-dark);
+    display: flex;
+}
+
+leader {
+    background-color: var(--foreground-dark);
+}
+
+leader:nth-child(odd) {
+    background-color: var(--foreground-dark);
+}
+
+leader:nth-child(even){
+    background-color: var(--foreground-medium);
+}
+
+.leaderboard-header-row {
+    margin: 0px;
+    padding: 10px;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    display: flex;
+}
+
+.leaderboard-header-row>.leaderboard-header-cell {
+    background-color: var(--background-light);
+}
+
+.leaderboard-header-cell {
+    flex: 1;
+}
+
+.leaderboard-toolbar-item {
+    display: inline-block;
+}
+
+histogram {
+    width: 100%;
+    height: 200px;
+}

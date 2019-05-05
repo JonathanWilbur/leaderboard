@@ -1,0 +1,26 @@
+<div class="leaderboard">
+  <div class="leaderboard-title">
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="leaderboard-toolbar">
+    <div class="leaderboard-toolbar-item"><button (click)="onToggleHistogram()">Toggle Histogram</button></div>
+    <div class="leaderboard-toolbar-item"><button (click)="onToggleSourceEditor()">Toggle Source Editor</button></div>
+    <div class="leaderboard-toolbar-item"><button (click)="onDelete()">Delete</button></div>
+  </div>
+  <div class="leaderboard-source-editor" *ngIf="displayingSourceEditor">
+    <!-- <input
+      type="text"
+      class="leaderboard-"
+      /> -->
+    <span>Source Editor</span>
+  </div>
+  <!-- <div class="leaderboard-histogram" >
+    <span>Histogram</span> -->
+    <histogram *ngIf="displayingHistogram" [leaders]="leaders"></histogram>
+  <!-- </div> -->
+  <div class="leaderboard-header-row">
+    <div class="leaderboard-header-cell"><h3>{{ nameColumnHeader }}</h3></div>
+    <div class="leaderboard-header-cell"><h3>{{ scoreColumnHeader }}</h3></div>
+  </div>
+  <leader *ngFor="let leader of leaders | leaderSort" [name]="leader.name" [score]="leader.score"></leader>
+</div>
